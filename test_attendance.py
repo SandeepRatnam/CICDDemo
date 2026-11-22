@@ -1,5 +1,6 @@
 
-from attendance import calculate_attendance, check_eligibility
+from attendance import calculate_attendance, check_eligibility, calculate_absent_days
+
 
 def test_attendance_calculation():
 
@@ -27,3 +28,6 @@ def test_zero_total_days():
     else:
         assert False
         
+def test_absent_days_calculation():
+
+    assert calculate_absent_days(100, 85) == 15
