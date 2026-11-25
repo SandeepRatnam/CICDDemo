@@ -79,7 +79,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: sandeepratnam343/cicd-demo-attendance:v1
+          tags: | 
+            sandeepratnam343/cicd-demo-attendance:v1
+            sandeepratnam343/cicd-demo-attendance:v2
    # Job 4: Deploy application to Render
   deploy:
     runs-on: ubuntu-latest
