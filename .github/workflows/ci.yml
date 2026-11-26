@@ -92,8 +92,8 @@ jobs:
           context: .
           push: true
           tags: |
-            sandeepratnam343/employee-attendance:v2
-            sandeepratnam343/employee-attendance:latest
+            sandeepratnam343/cicd-demo-attendance:v3
+            sandeepratnam343/cicd-demo-attendance:latest
 
 
   # Job 4: Deploy application to Render
