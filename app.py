@@ -1,6 +1,9 @@
+import os
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
+ATTENDANCE_THRESHOLD = int(os.environ.get("ATTENDANCE_THRESHOLD",75))
 
 @app.route("/")
 def home():
@@ -21,7 +24,7 @@ def calculate_attendance():
 
     percentage = (attended_days / total_days) * 100
 
-    if percentage >= 75:
+    if percentage >= ATTENDANCE_THRESHOLD:
         status = "Eligible"
     else:
         status = "Shortage"
